@@ -1,0 +1,42 @@
+x=100
+y=100
+def setup():
+    size (800,1000)
+    frameRate(600)
+def draw():
+    background(255,100,123)
+    rect(200,0,10,1200)
+    global x
+    global y 
+    rectMode(CENTER)
+    rect(x,y,45,45)
+    push()
+    fill(0,0,0)
+    pop()
+    if x>=150 and x<=200 and y>150 and y<200:
+        x=100
+        y=100
+    if x+50>=200 and x+50<=210 and y>0 and y<600 :
+        x=100
+        y=100
+          
+    
+   
+    
+    
+    
+def keyPressed():
+    global x,y
+    if key == CODED:
+        if keyCode == UP: 
+            y=y-10
+    if key == CODED:
+        if keyCode == DOWN:
+            y=y+10
+    if key == CODED:
+        if keyCode == RIGHT:
+            x=x+10
+    if key == CODED:
+        if keyCode == LEFT:
+            x=x-10
+     
